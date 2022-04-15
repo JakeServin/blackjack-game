@@ -1,6 +1,15 @@
 * {
     font-family: roboto;
 }
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(https://images.prismic.io/desplaines-rushstreetgaming/bff68e32-03e8-4198-8bd7-ab72bdaf11c7_Gaming+Floor+Expansion+Web.jpg?auto=compress,format&rect=56,0,1167,720&w=2140&h=1320);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .dealer-table {
     display: flex;
@@ -10,13 +19,16 @@
     /*background-color: #3e7651;*/
     background-image: url(https://media.istockphoto.com/vectors/seamless-pattern-with-playing-card-suits-on-green-background-vector-id696973922?k=20&m=696973922&s=612x612&w=0&h=b-E6w7KobibLFtHvvSqQQQy8hK14VM-c-YkHY4zVjF4=);
     background-size: 200px;
+    background-size: repeat;
     border: 3px solid black;
     border-radius: 20px;
     width: 10vh;
-    height: 70vh;
-    margin: 10px;
+    height: 80vh;
     box-shadow: 10px 10px 10px white inset;
 
+}
+#messages {
+    color:white;
 }
 .player {
     color: white;
@@ -26,7 +38,7 @@
 }
 .hand {
     background-color: #509768;
-    height: 12vh;
+    height: 10vh;
     display: flex;
 }
 
@@ -36,4 +48,30 @@
 }
 .hand:first-child {
     margin: 1% 1%;
+}
+
+@media (max-height: 425px) {
+    .dealer-table {
+        height: 100vh;
+        border-radius: 0px;
+    }
+    .hand {
+        height: 25vh;
+    }
+    
+}
+
+@media (min-width: 425px) {
+    .dealer-table {
+        max-width: 75%;
+    }
+    .hand {
+        height: 20vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .dealer-table {
+        max-width: 561px;
+    }
 }
