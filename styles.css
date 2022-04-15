@@ -27,6 +27,7 @@
 
 .hand * {
     margin: 1% 0 1% 1%;
+
 }
 .hand:first-child {
     margin: 1% 1%;
