@@ -74,4 +74,7 @@ body {
     .dealer-table {
         max-width: 561px;
     }
+    .hand {
+        height: 14vh;
+    }
 }
