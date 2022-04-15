@@ -51,6 +51,14 @@ body {
     margin: 1% 1%;
 }
 
+@media (orientation: landscape) {
+    .dealer-table {
+        height: 65vh;
+    }
+
+
+}
+
 @media (max-height: 425px) {
     .dealer-table {
         height: 100vh;
@@ -67,15 +75,12 @@ body {
         max-width: 75%;
     }
     .hand {
-        height: 20vh;
+        height: 16vh;
     }
 }
 
 @media (min-width: 768px) {
     .dealer-table {
         max-width: 561px;
-    }
-    .hand {
-        height: 14vh;
     }
 }
