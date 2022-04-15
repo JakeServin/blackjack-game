@@ -29,6 +29,7 @@ body {
 }
 #messages {
     color:white;
+    text-align: center;
 }
 .player {
     color: white;
