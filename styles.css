@@ -1,0 +1,38 @@
+
+
+.dealer-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3e7651;
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 10vh;
+    height: 70vh;
+    margin: 10px;
+
+}
+.player {
+    color: white;
+    display: block;
+    width: 95%;
+    margin: 1%;
+}
+.hand {
+    background-color: #509768;
+    height: 12vh;
+    display: flex;
+}
+
+.hand * {
+    margin: 1% 0 1% 1%;
+}
+.hand:first-child {
+    margin: 1% 1%;
+}
+.my-shadow {
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+ }
