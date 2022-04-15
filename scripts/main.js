@@ -39,9 +39,8 @@ window.addEventListener('DOMContentLoaded', function() {
     playerArr.push(cardImage);
     if (getScore(playerArr) > 21) {
       document.getElementById('messages').innerText = `${playerName} busts!`;
-      dealBtn.setAttribute('class', 'btn btn-light disabled');
-      hitBtn.setAttribute('class', 'btn btn-light disabled');
-      standBtn.setAttribute('class', 'btn btn-light disabled');
+      hitBtn.style.display = 'none';
+      standBtn.style.display = 'none';
       resetBtn.style.display = '';
     }
   }
@@ -115,8 +114,9 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     dealerPoints.innerText = getScore(dealerHand);
     playerPoints.innerText = getScore(playerHand);
-    hitBtn.setAttribute('class', 'btn btn-light');
-    dealBtn.setAttribute('class', 'btn btn-light disabled')
+    hitBtn.style.display = '';
+    standBtn.style.display = '';
+    dealBtn.style.display = 'none';
     
   })
 
@@ -130,9 +130,9 @@ window.addEventListener('DOMContentLoaded', function() {
       dealCard(dealerHandDiv, dealerHand, "Dealer")
       dealerPoints.innerText = getScore(dealerHand);
     }
-    dealBtn.setAttribute('class', 'btn btn-light disabled');
-    hitBtn.setAttribute('class', 'btn btn-light disabled');
-    standBtn.setAttribute('class', 'btn btn-light disabled');
+    dealBtn.style.display = 'none';
+    hitBtn.style.display = 'none';
+    standBtn.style.display = 'none';
     resetBtn.style.display = '';
 
     console.log(getScore(dealerHand) > getScore(playerHand) == true && getScore(dealerHand) < 22 == true);
@@ -146,6 +146,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
     resetBtn.addEventListener('click', () => {
       resetBtn.style.display = 'none';
+      dealBtn.style.display = '';
+      hitBtn.style.display = 'none';
+      standBtn.style.display = 'none';
       dealBtn.setAttribute('class', 'btn btn-light');
       standBtn.setAttribute('class', 'btn btn-light');
       removeChildren(dealerHandDiv);
@@ -155,6 +158,7 @@ window.addEventListener('DOMContentLoaded', function() {
       playerPoints.innerText = " ";  
       dealerHand = [];
       playerHand = [];
+      deck = buildDeck();
   })
 
   
