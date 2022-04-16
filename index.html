@@ -12,9 +12,19 @@
   <script src="scripts/main.js"></script>
 </head>
   <body>
-    <div class="message-box" id="messages"></div>
     <div class="dealer-table container-fluid shadow ">
-      <div class="player">
+      <div class="message-box" id="messages"></div>
+      <!-- Out of cards message -->
+      <div id="outMessage" style="display: none;" >You're out of cards!</div>
+      <!-- Deck Selector -->
+      <div id="deckSelector" class="text-center">
+        <div>How many decks would you like to use?</div>
+        <button id="1deck" class="btn btn-light">1 Deck</button>
+        <button id="3decks" class="btn btn-light">3 Decks</button>
+        <button id="6decks" class="btn btn-light">6 Decks</button>
+      </div>
+      <!-- Dealer -->
+      <div class="player" style="display: none;">
         <label class="player-name">Dealer: 
           <span id="dealer-points" class="points"></span>
         </label>
@@ -25,7 +35,8 @@
       
         </div>
       </div>
-      <div class="player">
+      <!-- Player -->
+      <div class="player" style="display: none;">
         <label class="player-name">Player: 
           <span id="player-points" class="points"></span>
         </label>
@@ -33,11 +44,11 @@
           <!-- Player Hand -->
         </div>
       </div>
-      <div class="buttons">
+      <div id="buttons" style="display: none;">
         <button id="deal-button" class="btn btn-light" type="button">Deal</button>
-        <button style="display: none;" id="hit-button" class="btn btn-light " type="button">Hit</button>
-        <button style="display: none;" id="stand-button" class="btn btn-light" type="button">Stand</button>
-        <button style="display: none;" id="reset-button" class="btn btn-light" type="button">Reset</button>
+        <button id="hit-button" style="display:none;" class="btn btn-light " type="button">Hit</button>
+        <button id="stand-button" style="display:none;" class="btn btn-light" type="button">Stand</button>
+        <button id="reset-button" style="display:none;" class="btn btn-light" type="button">Reset</button>
       </div>
     </div>
   </body>
