@@ -256,5 +256,5 @@ window.addEventListener('DOMContentLoaded', function () {
     // Show buttons
     buttonsWrapper.style.display = ''; 
   })
-
+  window.scrollTo(0, 1);
 })
