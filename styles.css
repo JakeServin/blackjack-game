@@ -71,12 +71,18 @@ body {
     
 }
 
-@media (min-width: 425px) {
+@media (min-width: 426px) {
     .dealer-table {
         max-width: 75%;
     }
     .hand {
         height: 16vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .dealer-table {
+        height: 35vh;
     }
 }
 
