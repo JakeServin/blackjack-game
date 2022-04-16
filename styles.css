@@ -86,7 +86,7 @@ body {
 
 @media (min-width: 768px) {
     .dealer-table {
-        max-width: 561px;
+        max-width: 50vw;
     }
 }
 @media (max-height: 425px) {
