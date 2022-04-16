@@ -153,6 +153,22 @@ window.addEventListener('DOMContentLoaded', function () {
     hitBtn.style.display = '';
     standBtn.style.display = '';
     dealBtn.style.display = 'none';
+    // If either player get's blackjack...
+    if (getScore(playerHand) == 21 || getScore(dealerHand) == 21) {
+      // Hide the buttons and show 'Reset' Button 
+      dealBtn.style.display = 'none';
+      hitBtn.style.display = 'none';
+      standBtn.style.display = 'none';
+      resetBtn.style.display = '';
+      // Declare winner
+      if (getScore(dealerHand) > getScore(playerHand) === true && getScore(dealerHand) < 22) {
+        document.getElementById('messages').innerText = "Dealer Wins!";
+      } else if (getScore(dealerHand) == getScore(playerHand)) {
+        document.getElementById('messages').innerText = "Tie!";
+      } else {
+        document.getElementById('messages').innerText = "Player Wins";
+      }
+    }
     
   })
 
@@ -178,10 +194,13 @@ window.addEventListener('DOMContentLoaded', function () {
     // Declare winner
     if (getScore(dealerHand) > getScore(playerHand) === true && getScore(dealerHand) < 22) {
       document.getElementById('messages').innerText = "Dealer Wins!";
+    } else if (getScore(dealerHand) == getScore(playerHand)) {
+      document.getElementById('messages').innerText = "Tie!";
     } else {
-      document.getElementById('messages').innerText = "Player Wins!";
+      document.getElementById('messages').innerText = "Player Wins";
     }
   })
+
 
   // 'Reset' button
   resetBtn.addEventListener('click', () => {
