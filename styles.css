@@ -64,6 +64,7 @@ body {
     .dealer-table {
         height: 100vh;
         border-radius: 0px;
+        width: 100vh;
     }
     .hand {
         height: 25vh;
@@ -73,7 +74,7 @@ body {
 
 @media (min-width: 426px) {
     .dealer-table {
-        max-width: 75%;
+        max-width: ;
     }
     .hand {
         height: 16vh;
@@ -90,4 +91,15 @@ body {
     .dealer-table {
         max-width: 561px;
     }
+}
+@media (max-height: 425px) {
+    .dealer-table {
+        height: 100vh;
+        border-radius: 0px;
+        width: 100%;
+    }
+    .hand {
+        height: 25vh;
+    }
+    
 }
