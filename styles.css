@@ -73,9 +73,6 @@ body {
 }
 
 @media (min-width: 426px) {
-    .dealer-table {
-        max-width: ;
-    }
     .hand {
         height: 16vh;
     }
