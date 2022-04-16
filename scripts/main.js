@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', function () {
   let dealerPoints = document.getElementById('dealer-points');
   let playerPoints = document.getElementById('player-points');
   let deck = [];
+  testy testy test
   
   // "Deals Card" / Adds card image to player data array and checks if player busts afterwards
   function dealCard(player, playerArr, playerName) {
